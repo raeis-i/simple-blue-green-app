@@ -31,7 +31,7 @@ docker run -p 8080:8080 -e PAGE_COLOR=green samraeisi/simple-blue-green-app:v1
 If you want to build the Docker image locally, follow these steps:
 
 ```bash
-git clone https://github.com/raeisi-i/simple-blue-green-app.git
+git clone https://github.com/raeis-i/simple-blue-green-app.git
 cd simple-blue-green-app
 ```
 
