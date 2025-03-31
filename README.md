@@ -16,7 +16,7 @@ To run the app with the **blue version** of the page(blue is default):
 
 ```bash
 docker run -p 8080:8080  samraeisi/simple-blue-green-app:v1
-or
+
 docker run -p 8080:8080 -e PAGE_COLOR=blue samraeisi/simple-blue-green-app:v1
 ```
 
@@ -25,3 +25,34 @@ To run the app with the **green version** of the page:
 ```bash
 docker run -p 8080:8080 -e PAGE_COLOR=green samraeisi/simple-blue-green-app:v1
 ```
+
+### Building the Docker Image
+
+If you want to build the Docker image locally, follow these steps:
+
+```bash
+git clone https://github.com/your-username/simple-blue-green-app.git
+cd simple-blue-green-app
+```
+
+Build Docker image
+
+```bash
+docker build -t simple-blue-green-app:v1 .
+```
+
+To run the app with the blue version of the page:
+
+```bash
+docker run -p 8080:8080 -e PAGE_COLOR=blue simple-blue-green-app:v1
+```
+
+To run the app with the green version of the page:
+
+```bash
+docker run -p 8080:8080 -e PAGE_COLOR=green simple-blue-green-app:v1
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
