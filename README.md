@@ -12,15 +12,16 @@ This is a simple Dockerized application designed to demonstrate the **Blue-Green
 
 ### Running the App
 
-To run the app with the **blue version** of the page(blue is default):
+Note:
+Setting the PAGE_COLOR environment variable to either blue or green is mandatory.
+
+To run the app with the **blue version** :
 
 ```bash
-docker run -p 8080:8080  samraeisi/simple-blue-green-app:v1
-
 docker run -p 8080:8080 -e PAGE_COLOR=blue samraeisi/simple-blue-green-app:v1
 ```
 
-To run the app with the **green version** of the page:
+To run the app with the **green version** :
 
 ```bash
 docker run -p 8080:8080 -e PAGE_COLOR=green samraeisi/simple-blue-green-app:v1
@@ -41,13 +42,13 @@ Build Docker image
 docker build -t simple-blue-green-app:v1 .
 ```
 
-To run the app with the blue version of the page:
+To run the app with the blue version:
 
 ```bash
 docker run -p 8080:8080 -e PAGE_COLOR=blue simple-blue-green-app:v1
 ```
 
-To run the app with the green version of the page:
+To run the app with the green version:
 
 ```bash
 docker run -p 8080:8080 -e PAGE_COLOR=green simple-blue-green-app:v1

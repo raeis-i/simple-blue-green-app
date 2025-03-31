@@ -3,6 +3,13 @@ const http = require('http');
 const blueColor = process.env.PAGE_BLUE_COLOR || '#0000FF';
 const greenColor = process.env.PAGE_GREEN_COLOR || '#00FF00';
 
+// Validate the PAGE_COLOR environment variable
+const validColors = ['blue', 'green'];
+if (process.env.PAGE_COLOR && !validColors.includes(process.env.PAGE_COLOR)) {
+  console.error(`Invalid color name passed: ${process.env.PAGE_COLOR}. Valid options are 'blue' or 'green'.`);
+  process.exit(1);  // Exit the application with a failure code
+}
+
 // Use the PAGE_COLOR environment variable to choose the color (blue or green)
 const pageColor = process.env.PAGE_COLOR === 'green' ? greenColor : blueColor;
 
